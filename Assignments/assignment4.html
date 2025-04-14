@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML, CSS, and Console</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .message {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Welcome!</h1>
+    <p class="message">This is a sample paragraph.</p>
+
+    <script>
+        console.log("The page has loaded!");
+        let titleElement = document.getElementById("main-title");
+        console.log("Title element:", titleElement);
+        let messageElements = document.getElementsByClassName("message");
+        console.log("Message elements:", messageElements);
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1 id="main-heading">Welcome to My Page</h1>
+    <p class="paragraph">This is the first paragraph.</p>
+    <p class="paragraph">This is the second paragraph.</p>
+    <ul id="item-list">
+        <li class="list-item">Item 1</li>
+        <li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
+    </ul>
+
+    <script>
+        const heading=document.getElementById('main-heading');
+        console.log(heading);
+
+        const paragraphs=document.getElementsByClassName('paragraph');
+        console.log(paragraphs);
+
+        const itemlist=document.getElementById('item-list');
+        console.log(itemlist);
+        
+        const listitems=document.getElementsByClassName('list-item');
+        console.log(listitems);
+
+        heading.textContent='Updated Heading!';
+        paragraphs[0].textContent="This paragraph has been changed by JavaScript!";
+        itemlist.innerHTML+='<li>New Item</li>';
+        heading.style.backgroundColor='lightblue';
+
+        for (let p of paragraphs) {
+            p.style.color = 'green';
+        }
+        paragraphs[1].classList.add('highlight');
+        listitems[0].classList.remove('list-item');
+    </script>
+</body>
+</html>

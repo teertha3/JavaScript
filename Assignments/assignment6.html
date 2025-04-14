@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JavaScript Basics
+        </title>
+    </head>
+    <body>
+        <h1>Booleans</h1>
+        <script>
+           let temperature=25;
+           let isRaining=true;
+           if(temperature>20){
+            console.log("It's a warm day!");
+           }
+           if(isRaining===true){
+            console.log("Remember to take an umbrella!");
+           }
+           else{
+            console.log("Enjoy the sunshine!");
+           }
+
+           if (temperature > 30) {
+            console.log("It's very hot!");
+           }
+           else if (temperature > 20) {
+            console.log("It's a pleasant temperature.");
+           }
+           else {
+            console.log("It might be a bit chilly.");
+           }
+
+
+           let hasPermission = true;
+           if (temperature > 25 && hasPermission){
+            console.log("You can go outside!");
+           }
+
+           if (isRaining || temperature < 10) {
+            console.log("Stay indoors if you prefer.");
+           }
+        </script>
+    </body>
+</html>

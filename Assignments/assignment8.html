@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+        <script>
+           const book1={
+            title: "The Hitchhiker's Guide to the Galaxy",
+            author: "Douglas Adams",
+            pages: 224,
+            isAvailable: true,
+            getBookInfo(){
+                return `${this.title} by ${this.author} (${this.pages} pages)`;
+            }
+           };
+           console.log(book1);
+           console.log("Title of the book is:",book1.title);
+           console.log("Author:",book1.author);
+           book1.publicationYear=1979;
+           book1.isAvailable=false;
+           console.log("Updated book1 object:");
+           console.log(book1);
+           console.log(book1.getBookInfo());
+
+           const book2={
+                title: "Fearless",
+                author: "Lauren Roberts",
+                pages: 598,
+                isAvailable:false,
+                publicationYear: 2025
+            };
+            const book3={
+                title: "A Court Of Mist and Fury",
+                author: "Sarah J.Mass",
+                pages: 626,
+                isAvailable:false,
+                publicationYear: 2016
+            }
+           let library=[book2,book3];
+           for(let books of library){
+            console.log(`Title:${books.title}, Author:${books.author}`);
+           }
+        </script>
+    </body>
+</html>

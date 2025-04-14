@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+      
+    </head>
+    <body>
+        <script>
+            function greet(){
+                console.log('Hello there!');
+            }
+            greet();
+
+            function greetUser(name){
+                console.log(`Hello,${name}!`);
+            }
+            greetUser("Namjoon");
+            greetUser("Hoseok");
+            greetUser("Lana");
+            greetUser("Taylor");
+
+            function addNumbers(num1,num2){
+                let sum=num1+num2;
+                console.log(`Sum of ${num1} & ${num2} is:${sum}`);
+            }
+            addNumbers(12,29);
+            addNumbers(94,5);
+            
+            function multiplyNumbers(a,b){
+                let prod=a*b;
+                return prod;
+            }
+            let product=multiplyNumbers(12,4);
+            console.log(product);
+
+            const sayHello = function() {
+                console.log("Hello there!");
+            };
+            sayHello();
+            
+        </script>
+    
+    </body>
+</html>
