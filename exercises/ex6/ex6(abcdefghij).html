@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Booleans and if-statements
+        </title>
+    </head>
+    <body>
+        <script>
+            //6a
+           let hour=21;
+           if(hour>=6 && hour<=12){
+            console.log('Good morning!');
+           }
+           else if(hour>=13 && hour<=17){
+            console.log('Good afternoon!');
+           }
+           else{
+            console.log('Good night!');
+           }
+
+           //6b&c
+           hour=7;
+           let name='Teertha';
+           if(hour>=6 && hour<=12){
+            console.log(`Good morning ${name}!`);
+           }
+           else if(hour>=13 && hour<=17){
+            console.log(`Good afternoon ${name}!`);
+           }
+           else{
+            console.log(`Good night ${name}!`);
+           }
+
+           //6d
+           let age=20;
+           if(age<=6 || age>=65){
+            console.log('Discount');
+           }
+           else{
+            console.log('No discount');
+           }
+
+           age=67;
+           if(age<=6 || age>=65){
+            console.log('Discount');
+           }
+           else{
+            console.log('No discount');
+           }
+
+           //6e
+           let isHoliday=true;
+           age=5;
+           if((age<=6 || age>=65) && isHoliday===false ){
+            console.log('Discount');
+           }
+           else{
+            console.log('No discount');
+           }
+
+           //6f
+           let num=Math.random();
+
+           //6g
+           if(num<0.5){
+            console.log('heads');
+           }
+           else{
+            console.log('tails');
+           }
+
+           //6h 
+           let result;
+           if(num<0.5){
+            result='heads';
+           }
+           else{
+            result='tails';
+           }
+           
+           //6i
+           let guess='heads';
+           if(guess===result){
+            console.log('You win!');
+           }
+           else{
+            console.log('You lose!');
+           }
+
+           //6j
+           guess===result? console.log('You win!') :console.log('You lose!');
+
+        </script>
+    </body>
+</html>
