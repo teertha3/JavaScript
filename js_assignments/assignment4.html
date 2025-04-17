@@ -24,6 +24,16 @@
             }
             greet1();
             console.log(lastname); //this gives an error as we can't access the local variable outside the function
+
+            //Block Scope
+            //Variables declared with let or const inside {} (like inside an if/for loop) are only available within that block.
+            {
+                let city='Hyderabad';
+                console.log(`City:${city}`);
+            }
+            console.log(city); //gives an error because block variable is being accessed outside
+
+
         </script>
     
     </body>
