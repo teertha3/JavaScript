@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numbers and Math</title>
+      
+    </head>
+    <body>
+        <script>
+           function evaluateConditions(obj){
+                if(obj.age>18 && obj.hasLicense===true){
+                    return "Eligible to drive";
+                }
+                if(obj.temperature>30 || obj.humidity>70){
+                    return "Warning: High discomfort level";
+                }
+                if(obj.role==='admin' || obj.role==='editor' && obj.isActive==='true'){
+                    return 'Access granted';
+                }
+                if (!(obj.isVerified) && obj.accountAge<1){
+                    return "Account needs verification";
+                }
+
+           }
+           const obj1={
+            age:20,
+            hasLicense:true
+           };
+           console.log(evaluateConditions(obj1));
+
+           const obj2={
+            temperature:35,
+            humidity:60
+           };
+           console.log(evaluateConditions(obj2));
+
+           const obj3={ 
+            isVerified:false,
+            accountAge: 0.5
+           };
+           console.log(evaluateConditions(obj3));
+        </script>
+    
+    </body>
+</html>
