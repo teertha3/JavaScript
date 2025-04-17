@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML,CSS Review & Console.log</title>
+        <style>
+            .highlight {
+                color: indigo;
+                font-weight: bold;
+            }
+        </style>
+           
+    </head>
+    <body>
+        <ul>
+            <li>Hot Chocolate</li>
+            <li>Croissant</li>
+            <li>Milk Toast</li>
+            <li>Smoothie bowl</li>
+        </ul>
+        <script>
+            let i=0;
+            const li=document.querySelectorAll('ul li');
+            li.forEach((item,i)=>{
+                console.log(`Item ${i+1} is ${item.textContent}`);
+                if((i+1)%2===0){
+                item.classList.add('highlight');
+                }
+            });
+            console.log(`Total items in list: ${li.length}`);
+        </script>
+    
+    </body>
+</html>
