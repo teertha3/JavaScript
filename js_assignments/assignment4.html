@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables</title>
+      
+    </head>
+    <body>
+        <script>
+           //Global Variables
+           //It is a variable declared outside the function or block and can be accessed anywhere in the script
+           let name= "Teertha"; //global variable
+           function greet() {
+                console.log(`Hello ${name}`); // the global variable is accessible inside functions
+            }
+            greet();
+            console.log(name); // and it is also accessible outside functions
+
+            //Local Variables
+            //A variable declared inside a function is local to that function and can't be accessed outside of function
+            function greet1(){
+                let lastname='Inavolu';
+                let firstname='Teertha';
+                console.log(`How are you ${firstname} ${lastname}?`);
+            }
+            greet1();
+            console.log(lastname); //this gives an error as we can't access the local variable outside the function
+        </script>
+    
+    </body>
+</html>
