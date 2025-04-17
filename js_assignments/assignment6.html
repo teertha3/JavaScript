@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+    <body>
+        <script>
+            function createCalculator(a,b){
+                const Calculations={
+                    add(){
+                        return `Addition:${a+b}`;
+                    },
+                    sub(){
+                        return `Subtraction:${a-b}`;
+                    },
+                    mul(){
+                        return `Multiplication:${a*b}`;
+                    },
+                    div(){
+                         return `Division:${a/b}`;
+                    }
+                };
+                    return Calculations;
+            }
+           let res=createCalculator(20,10);
+           console.log(res.add());
+           console.log(res.sub());
+           console.log(res.mul());
+           console.log(res.div());
+        </script>
+    </body>
+</html>
