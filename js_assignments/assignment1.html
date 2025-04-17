@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Numbers and Math</title>
+      
+    </head>
+    <body>
+        <script>
+           function formatCurrency(amount, currencyCode){
+            const formatter = new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: currencyCode,
+            });
+            return formatter.format(amount);
+           }
+           console.log(formatCurrency(123456.78, 'INR'));
+           console.log(formatCurrency(9876543.21, 'JPY'));
+           console.log(formatCurrency(1234.56, 'USD'));
+        </script>
+    
+    </body>
+</html>
