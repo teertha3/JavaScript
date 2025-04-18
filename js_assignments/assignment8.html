@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <div id="container">
+            <h1>My List</h1>
+            <ul id="List">
+              <li class="item">Hot Chocolate</li>
+              <li class="item">Croissant</li>
+              <li class="item">Smoothie</li>
+            </ul>
+            <button id="addButton">Add Item</button>
+          </div>
+          
+        <script>
+            const addButton=document.getElementById('addButton');
+            const myList=document.getElementById('List');
+
+            function remove(event){
+                event.target.remove();
+            }
+
+            const existing=document.querySelectorAll('.item');
+            existing.forEach(function(item){
+                item.addEventListener('Click',remove);
+            });
+
+            addButton.addEventListener('click',function(){
+                const newitem=document.createElement('li');
+                newitem.textContent='New Item';
+                newitem.className='item';
+                newitem.addEventListener('click',remove);
+                myList.appendChild(newitem);
+            });
+        </script>
+    
+    </body>
+</html>
