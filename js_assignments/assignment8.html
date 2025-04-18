@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <div id="container">
+            <h1>My List</h1>
+            <ul id="myList" onclick="removeList(event);">
+              <li class="item">Item1</li>
+              <li class="item">Item2</li>
+              <li class="item">Item3</li>
+            </ul>
+            <button id="addButton" onclick="addItem();">Add Item</button>
+          </div>
+        <script>
+            function addItem(){
+                const myList=document.getElementById('myList');
+                const newItem=document.createElement('li');
+                newItem.textContent='New Item';
+                newItem.className = 'item';
+                myList.appendChild(newItem);
+            }
+            function removeList(){
+                event.target.remove();
+            }
+
+        </script>
+    
+    </body>
+</html>
+
