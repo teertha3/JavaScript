@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Counter</title>
+  <style>
+    body {
+      font-family:Arial, Helvetica, sans-serif;
+      background:#f5f5f5;
+      text-align:center;
+      padding:50px;
+    }
+  
+    h1 {
+      margin-bottom:20px;
+      font-weight:normal;
+    }
+  
+    .counter {
+      font-size:48px;
+      margin:20px 0;
+    }
+  
+    .buttons {
+      display:flex;
+      justify-content:center;
+      gap:10px;
+    }
+  
+    button {
+      padding:8px 16px;
+      font-size:16px;
+      border:1px solid #ccc;
+      background:white;
+      cursor:pointer;
+    }
+  
+    button:hover {
+      background: #eee;
+    }
+  
+    button:disabled {
+      color: #aaa;
+      border-color: #eee;
+      background: #f9f9f9;
+      cursor: not-allowed;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <h1>Interactive Counter</h1>
+  <div class="counter" id="counter">0</div>
+  <div class="buttons">
+    <button onclick="decrement()" class="decrement-button">Decrement</button>
+    <button onclick="increment()">Increment</button>
+  </div>
+
+  <script>
+    let count = 0;
+    const counter = document.getElementById("counter");
+    const decrement_button = document.querySelector(".decrement-button");
+
+
+    function updateCount() {
+      counter.textContent = count;
+      decrement_button.disabled = count === 0; 
+    }
+
+    function increment() {
+      count++;
+      updateCount();
+    }
+
+    function decrement() {
+      if (count > 0) {
+        count--;
+        updateCount();
+      }
+    }
+
+    updateCount();
+  </script>
+
+</body>
+</html>
