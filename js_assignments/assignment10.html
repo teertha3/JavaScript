@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arrays and Loops</title>
+</head>
+<body>
+  <script>
+     function processTransactions(transactions){
+        let balance=0;
+        let totalDeposit=0;
+        let totalWithdraw=0;
+        for(let transaction of transactions){
+            if(transaction.type==='deposit'){
+                balance+=transaction.amount;
+                totalDeposit+=transaction.amount;
+            }
+            else if(transaction.type==='withdrawal'){
+                balance-=transaction.amount;
+                totalWithdraw+=transaction.amount;
+            }
+        }
+     
+     return {
+        finalBalance:balance,
+        totaldeposit:totalDeposit,
+        totalwithdraw:totalWithdraw
+     };
+    }
+
+    const transactions=[
+        {type:'deposit',amount:900},
+        {type:'withdrawal',amount:100},
+    ];
+    const res=processTransactions(transactions);
+    console.log(res);
+</script>
+</body>
+</html>
