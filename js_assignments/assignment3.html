@@ -19,15 +19,15 @@
         </ul>
         <script>
             let i=0;
-            const li=document.querySelectorAll('ul li');
-            li.forEach((item,i)=>{
-                console.log(`Item ${i+1} is ${item.textContent}`);
-                if((i+1)%2===0){
-                item.classList.add('highlight');
+            const list=document.querySelectorAll('ul li');
+            for (let i=0; i<list.length; i++) {
+                console.log(`Item ${i+1} is ${list[i].textContent}`);
+                if ((i + 1)%2 === 0) {
+                    list[i].classList.add('highlight');
                 }
-            });
-            console.log(`Total items in list: ${li.length}`);
+            }
+            console.log(`Total items in list: ${list.length}`);
         </script>
-    
+        
     </body>
 </html>
