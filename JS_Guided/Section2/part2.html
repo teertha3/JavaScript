@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+           /* const user = {
+                name:'Alice',
+                greetDelayed: function() {
+                    setTimeout(function() {
+                    console.log(`Hello, ${this.name}!`);
+                    }, 1000);
+                }
+            };
+
+            user.greetDelayed();
+            */
+
+            //corrected approach
+            const userCorrectedTraditional = {
+                name:'Alice',
+                greetDelayed: function() {
+                    const self = this; // Store a reference to 'this'
+                    setTimeout(function() {
+                        console.log(`Hello, ${self.name}!`);
+                    }, 1000);
+                }
+            };
+            userCorrectedTraditional.greetDelayed();
+
+            const userCorrectedArrow = {
+            name:'Bob',
+            greetDelayed: function() {
+            setTimeout(() => { // Arrow function here
+            console.log(`Hello, ${this.name}!`);
+
+            }, 1000);
+            }
+            };
+            userCorrectedArrow.greetDelayed();
+
+
+            //task 4
+            /*
+            const student = {
+                firstname:"Teertha",
+                lastname:'Inavolu',
+                studentDetails: function() {
+                    setTimeout(function() {
+                    console.log(`Teertha's last name is:${this.lastname}`);
+                    },1000);
+                }
+            };
+            student.studentDetails(); */ 
+            //the above commented part of code shows us the 'undefined' in console.log() statement when runned the code 
+            //so to correct this and make this.lastname to point to actual object we use arrow function
+
+            //corrected version
+            const student = {
+                firstname:"Teertha",
+                lastname:'Inavolu',
+                studentDetails: function() {
+                    setTimeout( ()=> {
+                    console.log(`Teertha's last name is: ${this.lastname}`);
+                    },1000);
+                }
+            };
+            student.studentDetails();
+
+
+
+        </script>
+    </body>
+</html>
