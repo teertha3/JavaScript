@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <script>
+       /*
+        function delayedGreeter(names) {
+            for (var i = 0; i<names.length; i++) {
+                setTimeout(function() {
+                console.log(`Hello, ${names[i]} ${i}!`);
+                }, i * 1000);
+            }
+        }
+        delayedGreeter(['Alice','Bob','Charlie']);
+        // Expected output (with delays):
+        // Hello, Alice! (after 0 seconds)
+        // Hello, Bob! (after 1 second)
+        // Hello, Charlie! (after 2 seconds)
+        // Actual output: ?
+        */
+        function delayedGreeterLet(names) {
+            for (let i = 0; i<names.length; i++) { // Using &#39;let&#39;
+                setTimeout(function() {
+                console.log(`Hello, ${names[i]} ${i}!`);
+                }, i * 1000);
+            }
+        }
+         delayedGreeterLet(['Alice','Bob','Charlie']);
+    </script>
+</html>
