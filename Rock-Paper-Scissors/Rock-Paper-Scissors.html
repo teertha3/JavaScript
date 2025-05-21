@@ -23,6 +23,8 @@
         <p class="score js-score">Wins: 0, Losses: 0, Ties: 0</p>
         <button class="reset-score-button" onclick="resetScore();">Reset Score</button>
 
+        <button class="auto-play-button" onclick="autoPlay();">Auto Play</button>
+
         <script>  
             let score={
                 wins: 0,
@@ -34,6 +36,23 @@
                 score = savedScore;
             }
             updateScoreElement();
+
+            let isAutoPlay=false;
+            let intervalId;
+            function autoPlay(){
+                if(!isAutoPlay){
+                    intervalId=setInterval(function(){
+                            const playerMove=pickComputerMove();
+                            makeMove(playerMove);
+                        },1000);
+                    isAutoPlay=true;
+                } else{
+                    clearInterval(intervalId);
+                    isAutoPlay=false;
+                }
+               
+            }
+
             function makeMove(playerMove) {
                 const computerMove=pickComputerMove();
                 const resultElement=document.querySelector('.js-result');
@@ -67,6 +86,9 @@
                 updateScoreElement();
                 localStorage.removeItem('score');
             }
+
+            
+
             function pickComputerMove() {
                 const randomNumber=Math.random();
                 let computerMove;
@@ -87,8 +109,14 @@
             function updateScoreElement() {
                 document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
             }
+
+            
     
         </script>
+    
+    </body>
+</html>
+
     
     </body>
 </html>
